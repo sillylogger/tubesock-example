@@ -1,5 +1,10 @@
 <h1>Chat</h1>
-<pre id='output' style="height: 300px; overflow: auto"></pre>
+
+<pre id='output' style="height: 300px; overflow: auto">
+<% Message.all.each do |m| %>
+<%= m.content %>
+<% end %>
+</pre>
 
 <form id="chat" action="">
   <input id="message">
